@@ -1,6 +1,6 @@
 ---
 name: slack
-description: Use whenever working with Slack. Find channels or users, read channels or threads, search messages or files, draft or send messages, schedule posts, read profiles, or create and read canvases. Also use when the user needs general Slack help, tool selection, or a clear explanation of which Slack actions are and are not supported.
+description: Summarize Slack channels and threads, draft post-ready Slack messages, and format content in Slack markdwn through connected Slack data. Use when the user wants to review unread activity, distill long threads, prepare status updates, reply in the right tone, or translate notes into Slack-ready message formatting.
 ---
 
 # Slack
