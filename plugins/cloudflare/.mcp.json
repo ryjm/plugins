@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "cloudflare-api": {
+      "type": "streamable_http",
+      "url": "https://mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-docs": {
+      "type": "streamable_http",
+      "url": "https://docs.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-bindings": {
+      "type": "streamable_http",
+      "url": "https://bindings.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-builds": {
+      "type": "streamable_http",
+      "url": "https://builds.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-observability": {
+      "type": "streamable_http",
+      "url": "https://observability.mcp.cloudflare.com/mcp"
+    }
+  }
+}
