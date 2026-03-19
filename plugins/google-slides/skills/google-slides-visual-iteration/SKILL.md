@@ -44,6 +44,7 @@ If a dedicated visual-iteration tool exists in the runtime, use it. Otherwise, e
 - Call `get_slide_thumbnail` first.
 - Use `LARGE` when spacing, overlap, cropping, or dense layouts are the concern.
 - Treat the thumbnail as the source of truth for visual quality. Raw JSON alone is not enough.
+- When the tool returns a thumbnail artifact, image content, or image-bearing URL/data wrapper, treat that as analyzable visual input for this workflow and inspect it directly.
 - If `get_slide_thumbnail` succeeds, treat that as the visual verification path for this workflow even if the transcript view looks metadata-shaped. Do not abandon the thumbnail loop just because the runtime shows a thumbnail artifact, URL, or metadata wrapper instead of inline pixels in the message body.
 - Do not switch to deck export, PDF rendering, or other fallback rendering paths when the thumbnail tool already succeeded. Only use a fallback path if the thumbnail action itself failed or is unavailable.
 
