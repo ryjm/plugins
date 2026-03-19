@@ -120,11 +120,13 @@ If the user asks to improve the whole presentation:
 - Do not present one giant deck-wide issue dump before editing. The working unit is still one slide at a time.
 
 2. Prioritize the slide order.
-- Start with slides that have overlap, clipping, unreadable density, or broken crops.
-- Move to spacing, alignment, title placement, image treatment, and consistency after the hard failures are under control.
+- If the user asked for the whole deck, start at the first slide in scope and move forward in slide order until the last slide in scope.
+- Do not skip ahead to later slides just because they look worse unless the user explicitly asked you to prioritize certain slides.
+- Within each slide, address overlap, clipping, unreadable density, and broken crops before moving on to spacing, alignment, title placement, image treatment, and consistency.
 
 3. Finish each slide before moving on.
 - For each target slide, run the full thumbnail -> diagnose -> batch_update -> re-thumbnail loop.
+- Work sequentially: finish the current slide before starting issue diagnosis for the next slide.
 - Start each slide with an explicit list of the 2-4 key issues on that slide only.
 - Fix that slide before moving to the next one. Do not diagnose the whole rest of the deck in detail while the current slide is still unresolved.
 - End each pass with a fixed-vs-remaining issue summary for that slide only.
@@ -141,6 +143,7 @@ If the user asks to improve the whole presentation:
 ## Output Conventions
 
 - Before the first edit pass on a slide, show a short issue list for that slide so the user can see what will be fixed.
+- In deck-wide mode, narrate progress in slide order, for example `slide 1`, then `slide 2`, then `slide 3`, until the last slide in scope.
 - Keep deck-wide work slide-scoped in the narration: talk about the current slide's issues, fixes, and remaining defects before moving on to another slide.
 - After each pass, separate `fixed`, `remaining`, and `new regressions` clearly instead of giving a vague progress note.
 - Keep the issue list concrete and visual, for example `text overflow in right card`, `image misaligned with left column`, or `middle bullet line is bolded inconsistently`.
