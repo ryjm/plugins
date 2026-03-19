@@ -46,7 +46,8 @@ If a dedicated visual-iteration tool exists in the runtime, use it. Otherwise, e
 - Treat the thumbnail as the source of truth for visual quality. Raw JSON alone is not enough.
 
 4. Diagnose concrete visual problems.
-- Start each pass by stating the specific visible issues on that slide before editing.
+- Before editing a slide, list the specific visible issues back to the user for that slide.
+- Do not keep the diagnosis implicit. The user should be able to see what you think is wrong before the first `batch_update` pass.
 - Look for text too close to edges or neighboring elements.
 - Look for text overflow, clipping, or density that makes the slide feel compressed.
 - Look for overlapping text boxes, shapes, charts, and images.
@@ -132,6 +133,12 @@ If the user asks to improve the whole presentation:
 
 5. Report what changed.
 - Summarize which slides were updated, what categories of issues were fixed, and any slides that still need human taste decisions.
+
+## Output Conventions
+
+- Before the first edit pass on a slide, show a short issue list for that slide so the user can see what will be fixed.
+- After each pass, separate `fixed`, `remaining`, and `new regressions` clearly instead of giving a vague progress note.
+- Keep the issue list concrete and visual, for example `text overflow in right card`, `image misaligned with left column`, or `middle bullet line is bolded inconsistently`.
 
 ## Editing Guidance For Raw Slides Requests
 
