@@ -1,6 +1,6 @@
 ---
 name: google-slides-visual-iteration
-description: Iteratively improve connected Google Slides visuals. Use when the user asks for spacing, alignment, overlap, crowding, or consistency fixes through thumbnail diagnosis, batch_update edits, and re-thumbnail verification.
+description: Iteratively improve existing connected Google Slides decks for visual quality and formatting. Use when a user asks to polish slides, fix alignment, spacing, overlap, text overflow, crowding, inconsistent formatting, awkward whitespace, or slide visuals; when the user wants direct edits to an existing Google Slides deck or shared Slides link; or when the request says things like fix this slide, clean up this deck, make it look better, visual iteration, or use the Google Slides connector.
 ---
 
 # Google Slides Visual Iteration
@@ -8,6 +8,13 @@ description: Iteratively improve connected Google Slides visuals. Use when the u
 Use this skill for existing or newly imported Google Slides decks when the user wants visual cleanup, not just content edits.
 
 Prefer the connected Google Slides workflow over generic slide-generation skills when the task is about improving a real Slides deck.
+Prefer this skill over [google-slides](../google-slides/SKILL.md) when the request is primarily about visual polish on an existing deck rather than content generation or general deck inspection.
+
+## Use When
+
+- The user wants to improve how an existing Google Slides deck looks, not just change its copy.
+- The request includes phrases like "fix this slide," "make this deck look better," "clean up formatting," "fix overflow," "fix spacing," "fix alignment," or "visual iteration."
+- The user shares a connected Google Slides deck or link and wants edits applied directly to that deck.
 
 ## Required Tooling
 
@@ -120,3 +127,5 @@ The Slides connector exposes raw `batch_update` requests. That means:
 - `Use $google-slides-visual-iteration to fix the alignment and overlap issues on slide 4 of this Google Slides deck.`
 - `Use $google-slides-visual-iteration to clean up this entire deck and make the slide layouts feel consistent.`
 - `Import this PPTX into Google Slides, then use $google-slides-visual-iteration to polish each slide with thumbnail-based verification.`
+- `Use $google-slides-visual-iteration to make this existing Google Slides deck look better and fix the formatting issues.`
+- `Use $google-slides-visual-iteration to clean up spacing, overflow, and alignment in this shared Google Slides link.`
