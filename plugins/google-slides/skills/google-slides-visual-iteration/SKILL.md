@@ -59,6 +59,7 @@ If a dedicated visual-iteration tool exists in the runtime, use it. Otherwise, e
 
 5. Make one coherent edit pass.
 - Use `batch_update` to fix the current issue cluster for that slide, not just a tiny nudge that leaves the main problems untouched.
+- Be aggressive enough to materially improve the slide in each pass. Do not make timid edits that technically move elements but leave the slide still looking broken.
 - Batch related fixes together when they affect the same slide structure, such as overflow plus alignment plus inconsistent spacing in one column or card set.
 - Prefer moving, resizing, reflowing, redistributing, or re-aligning existing elements over rewriting the slide.
 - Do not default to shrinking font size, tightening line spacing, or squishing elements closer together just to make the slide fit.
@@ -86,11 +87,13 @@ Apply these in order:
 - No clipped text.
 - No elements touching or nearly touching unless intentionally grouped.
 - Keep comfortable padding between text and container edges.
+- Text inside a box, card, or shape should not sit uncomfortably close to that container's border. If the padding looks cramped in the thumbnail, treat it as a defect and fix it.
 
 2. Structure
 - Align related elements to a shared left edge, center line, or grid.
 - Normalize spacing between repeated items.
 - Remove accidental overlaps before style refinements.
+- When a container or shape is too small for its text, prefer resizing the container or redistributing the layout over tolerating cramped text padding.
 
 3. Balance
 - Avoid slides that are top-heavy or left-heavy unless it is a deliberate composition.
@@ -104,6 +107,7 @@ Apply these in order:
 - Do not churn the whole slide if one local fix is enough.
 - Do not invent new decorative elements unless the user explicitly wants a redesign.
 - Do not treat compression as polish. A slide that only fits because everything was squeezed tighter is still broken.
+- Do not stop after a cosmetic near-fix. If the text is still cramped against a border, still visually crowded, or still obviously misaligned, keep editing.
 
 ## Deck-Wide Mode
 
