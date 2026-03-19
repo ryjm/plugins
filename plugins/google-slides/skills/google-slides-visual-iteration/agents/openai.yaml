@@ -1,4 +1,4 @@
 interface:
   display_name: "Google Slides Visual Iteration"
   short_description: "Fix Google Slides formatting and visual polish"
-  default_prompt: "Use $google-slides-visual-iteration to clean up an existing Google Slides deck, fix alignment/spacing/overflow, and make the slides look better with thumbnail-verified edits."
+  default_prompt: "Use $google-slides-visual-iteration to inspect an existing Google Slides deck, state the visual issues slide by slide, fix them in strong thumbnail-verified batches, and iterate until the deck looks clean."

@@ -46,23 +46,31 @@ If a dedicated visual-iteration tool exists in the runtime, use it. Otherwise, e
 - Treat the thumbnail as the source of truth for visual quality. Raw JSON alone is not enough.
 
 4. Diagnose concrete visual problems.
+- Start each pass by stating the specific visible issues on that slide before editing.
 - Look for text too close to edges or neighboring elements.
+- Look for text overflow, clipping, or density that makes the slide feel compressed.
 - Look for overlapping text boxes, shapes, charts, and images.
+- Look for misaligned images, cards, icons, and text blocks.
+- Look for inconsistent emphasis such as one label or bullet line being bolded differently from its siblings without intent.
 - Look for uneven alignment, broken grid structure, inconsistent spacing, off-center titles, awkward margins, and clipped elements.
 - Look for image distortion, poor crops, weak hierarchy, and slides that feel heavier on one side without intent.
 - Look for visual regressions introduced by the previous pass before adding more polish.
 - Prioritize legibility and collisions first, then alignment/spacing, then aesthetic polish.
 
-5. Make small, targeted edits.
-- Use `batch_update` with a minimal set of requests for the current pass.
-- Prefer moving, resizing, or re-aligning existing elements over rewriting the slide.
-- Keep each pass narrow. Fix the most obvious 1-3 issues, then verify before making more changes.
+5. Make one coherent edit pass.
+- Use `batch_update` to fix the current issue cluster for that slide, not just a tiny nudge that leaves the main problems untouched.
+- Batch related fixes together when they affect the same slide structure, such as overflow plus alignment plus inconsistent spacing in one column or card set.
+- Prefer moving, resizing, reflowing, redistributing, or re-aligning existing elements over rewriting the slide.
+- Do not default to shrinking font size, tightening line spacing, or squishing elements closer together just to make the slide fit.
+- If content still does not fit cleanly after a reasonable structural pass, split the content across slides or escalate to [google-slides-template-surgery](../google-slides-template-surgery/SKILL.md) instead of repeatedly compressing the layout.
+- Keep each pass narrow enough that the effect is understandable, but strong enough to visibly improve the slide.
 - When a fresh revision token is available from the runtime, include `write_control`; otherwise omit it and keep batches small.
 
 6. Verify immediately.
 - Call `get_slide_thumbnail` again after every batch update.
-- Confirm the targeted issue is actually fixed before moving on.
-- If a fix introduced a new collision or imbalance, correct that next instead of blindly continuing.
+- State which issues are now fixed, which issues remain, and whether the pass introduced any new regressions.
+- Confirm the targeted issue cluster is actually fixed before moving on.
+- If a fix introduced a new collision, imbalance, or cramped layout, correct that next instead of blindly continuing.
 
 7. Iterate a few times, then stop.
 - Run 2-4 visual passes per slide by default.
@@ -88,9 +96,14 @@ Apply these in order:
 - Avoid slides that are top-heavy or left-heavy unless it is a deliberate composition.
 - Resize or reposition oversized images/shapes that dominate the slide without helping the message.
 
-4. Restraint
+4. Consistency
+- Keep repeated bullets, labels, captions, and card headings consistent in weight, alignment, and spacing unless the difference is intentional.
+- If a row or family of elements should look parallel, treat one-off bolding, indentation, or sizing differences as defects to fix.
+
+5. Restraint
 - Do not churn the whole slide if one local fix is enough.
 - Do not invent new decorative elements unless the user explicitly wants a redesign.
+- Do not treat compression as polish. A slide that only fits because everything was squeezed tighter is still broken.
 
 ## Deck-Wide Mode
 
@@ -105,6 +118,7 @@ If the user asks to improve the whole presentation:
 
 3. Finish each slide before moving on.
 - For each target slide, run the full thumbnail -> diagnose -> batch_update -> re-thumbnail loop.
+- Start each slide with an explicit issue list and end each pass with a fixed-vs-remaining issue summary.
 - Do 2-4 verified passes on that slide as needed before advancing to the next one.
 - If the same formatting defect keeps recurring because of shared structure, escalate to [google-slides-template-surgery](../google-slides-template-surgery/SKILL.md) instead of hand-patching every slide forever.
 
@@ -121,7 +135,8 @@ The Slides connector exposes raw `batch_update` requests. That means:
 - Always inspect the current slide before editing.
 - Use object IDs from the live slide state, not guessed IDs.
 - Prefer reversible, geometric edits first: transform, size, alignment, deletion only when clearly safe.
-- If a text box is too dense, try resizing or moving it before shortening the text.
+- If a text box is too dense, try resizing, redistributing, or reflowing the slide before shortening the text.
+- If the only apparent fix is to compress all the content tighter, stop and reconsider the layout pattern instead of blindly applying that edit.
 
 ## Failure Policy
 
