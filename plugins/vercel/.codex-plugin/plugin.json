@@ -1,29 +1,55 @@
 {
   "name": "vercel",
-  "version": "1.0.0",
-  "description": "Search docs and deploy apps",
+  "version": "1.1.0",
+  "description": "Comprehensive Vercel plugin with connector app, Codex-compatible skills, hooks, and MCP.",
   "author": {
-    "url": "https://vercel.com/"
+    "name": "Vercel Labs",
+    "url": "https://github.com/vercel-labs"
   },
   "homepage": "https://vercel.com/",
   "repository": "https://github.com/openai/plugins",
-  "license": "MIT",
-  "keywords": [],
+  "license": "Apache-2.0",
+  "keywords": [
+    "vercel",
+    "nextjs",
+    "ai-sdk",
+    "turborepo",
+    "turbopack",
+    "workflow",
+    "deployment",
+    "edge-functions",
+    "serverless",
+    "ai-gateway",
+    "chat-sdk",
+    "chat-bot",
+    "slack-bot",
+    "discord-bot"
+  ],
   "apps": "./.app.json",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Vercel",
-    "shortDescription": "Search docs and deploy apps",
-    "longDescription": "Search docs and deploy apps",
-    "category": "Productivity",
-    "capabilities": [],
+    "shortDescription": "Vercel ecosystem guidance, MCP, docs, and deploy tools",
+    "longDescription": "Bring the full Vercel ecosystem into Codex with the Vercel connector app, curated skills, project-profiling hooks, and the official Vercel MCP server. This canonical `vercel` plugin now subsumes the previous `vercel-plugin` bundle.",
+    "developerName": "Vercel Labs",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
     "websiteURL": "https://vercel.com/",
     "privacyPolicyURL": "https://vercel.com/legal/privacy-policy",
     "termsOfServiceURL": "https://vercel.com/legal/terms",
     "defaultPrompt": [
-      "Why is build failing"
+      "Why is build failing",
+      "Audit this repo for Vercel deployment risks",
+      "Which Vercel tools fit this app best"
     ],
-    "screenshots": [],
-    "composerIcon": "./assets/app-icon.png",
-    "logo": "./assets/app-icon.png"
+    "composerIcon": "./assets/vercel.svg",
+    "logo": "./assets/vercel.svg",
+    "screenshots": []
   }
 }

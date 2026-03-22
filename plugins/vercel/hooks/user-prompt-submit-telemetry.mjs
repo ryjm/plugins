@@ -4,7 +4,7 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "fs";
 import { homedir, tmpdir } from "os";
 import { join, dirname } from "path";
-var PREF_PATH = join(homedir(), ".claude", "vercel-plugin-telemetry-preference");
+var PREF_PATH = join(homedir(), ".claude", "vercel-telemetry-preference");
 function parseStdin() {
   try {
     const raw = readFileSync(0, "utf-8").trim();
@@ -60,8 +60,8 @@ async function main() {
     "- multiSelect: false",
     "",
     "After the user responds:",
-    "- If they chose \"Enable telemetry\", run: `echo 'enabled' > ~/.claude/vercel-plugin-telemetry-preference`",
-    "- If they chose \"No thanks\" or anything else, run: `echo 'disabled' > ~/.claude/vercel-plugin-telemetry-preference`"
+    "- If they chose \"Enable telemetry\", run: `echo 'enabled' > ~/.claude/vercel-telemetry-preference`",
+    "- If they chose \"No thanks\" or anything else, run: `echo 'disabled' > ~/.claude/vercel-telemetry-preference`"
   ].join("\n");
   const output = {
     hookSpecificOutput: {
