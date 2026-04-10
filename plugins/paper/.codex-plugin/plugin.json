@@ -35,7 +35,8 @@
       "Write"
     ],
     "websiteURL": "https://paper.design",
-    "privacyPolicyURL": "https://paper.design/privacy",
+    "privacyPolicyURL": "https://paper.design/legal/privacy",
+    "termsOfServiceURL": "https://paper.design/legal/tos",
     "defaultPrompt": [
       "Implement the selected Paper design in this codebase",
       "Create a Paper settings page using this repo's styles and tokens",
