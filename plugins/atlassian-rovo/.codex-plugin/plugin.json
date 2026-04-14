@@ -18,7 +18,10 @@
     "shortDescription": "Manage Jira and Confluence fast",
     "longDescription": "Manage Jira and Confluence fast",
     "category": "Productivity",
-    "capabilities": [],
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
     "websiteURL": "https://www.atlassian.com",
     "privacyPolicyURL": "https://www.atlassian.com/legal/privacy-policy",
     "defaultPrompt": [
