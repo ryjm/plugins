@@ -180,48 +180,85 @@ def resolve_pr(pr_value: str | None, repo_root: Path) -> str | None:
 
 
 def fetch_checks(pr_value: str, repo_root: Path) -> list[dict[str, Any]] | None:
-    primary_fields = ["name", "state", "conclusion", "detailsUrl", "startedAt", "completedAt"]
     result = run_gh_command(
-        ["pr", "checks", pr_value, "--json", ",".join(primary_fields)],
+        ["pr", "view", pr_value, "--json", "statusCheckRollup,headRefOid"],
         cwd=repo_root,
     )
     if result.returncode != 0:
-        message = "\n".join(filter(None, [result.stderr, result.stdout])).strip()
-        available_fields = parse_available_fields(message)
-        if available_fields:
-            fallback_fields = [
-                "name",
-                "state",
-                "bucket",
-                "link",
-                "startedAt",
-                "completedAt",
-                "workflow",
-            ]
-            selected_fields = [field for field in fallback_fields if field in available_fields]
-            if not selected_fields:
-                print("Error: no usable fields available for gh pr checks.", file=sys.stderr)
-                return None
-            result = run_gh_command(
-                ["pr", "checks", pr_value, "--json", ",".join(selected_fields)],
-                cwd=repo_root,
-            )
-            if result.returncode != 0:
-                message = (result.stderr or result.stdout or "").strip()
-                print(message or "Error: gh pr checks failed.", file=sys.stderr)
-                return None
-        else:
-            print(message or "Error: gh pr checks failed.", file=sys.stderr)
-            return None
+        return fetch_checks_via_api(pr_value, repo_root)
     try:
-        data = json.loads(result.stdout or "[]")
+        data = json.loads(result.stdout or "{}")
     except json.JSONDecodeError:
-        print("Error: unable to parse checks JSON.", file=sys.stderr)
+        return fetch_checks_via_api(pr_value, repo_root)
+    rollup = data.get("statusCheckRollup")
+    if not isinstance(rollup, list):
+        return fetch_checks_via_api(pr_value, repo_root)
+    return [_normalize_rollup_entry(entry) for entry in rollup]
+
+
+def _normalize_rollup_entry(entry: dict[str, Any]) -> dict[str, Any]:
+    if entry.get("__typename") == "StatusContext":
+        return {
+            "name": entry.get("context", ""),
+            "state": entry.get("state", ""),
+            "conclusion": entry.get("state", ""),
+            "detailsUrl": entry.get("targetUrl", ""),
+            "startedAt": entry.get("createdAt", ""),
+            "completedAt": "",
+        }
+    return {
+        "name": entry.get("name", ""),
+        "state": entry.get("status", ""),
+        "conclusion": entry.get("conclusion", ""),
+        "detailsUrl": entry.get("detailsUrl", ""),
+        "startedAt": entry.get("startedAt", ""),
+        "completedAt": entry.get("completedAt", ""),
+    }
+
+
+def fetch_checks_via_api(pr_value: str, repo_root: Path) -> list[dict[str, Any]] | None:
+    repo_slug = fetch_repo_slug(repo_root)
+    if not repo_slug:
+        print("Error: unable to resolve repository for API fallback.", file=sys.stderr)
         return None
-    if not isinstance(data, list):
-        print("Error: unexpected checks JSON shape.", file=sys.stderr)
+    head_sha = fetch_pr_head_sha(pr_value, repo_root)
+    if not head_sha:
+        print("Error: unable to resolve PR head SHA for API fallback.", file=sys.stderr)
         return None
-    return data
+    endpoint = f"/repos/{repo_slug}/commits/{head_sha}/check-runs"
+    result = run_gh_command(["api", endpoint, "--paginate"], cwd=repo_root)
+    if result.returncode != 0:
+        message = (result.stderr or result.stdout or "").strip()
+        print(message or "Error: gh api check-runs failed.", file=sys.stderr)
+        return None
+    try:
+        data = json.loads(result.stdout or "{}")
+    except json.JSONDecodeError:
+        print("Error: unable to parse API check-runs JSON.", file=sys.stderr)
+        return None
+    raw_runs = data.get("check_runs", [])
+    checks: list[dict[str, Any]] = []
+    for run in raw_runs:
+        checks.append({
+            "name": run.get("name", ""),
+            "state": run.get("status", ""),
+            "conclusion": run.get("conclusion") or "",
+            "detailsUrl": run.get("details_url") or run.get("html_url") or "",
+            "startedAt": run.get("started_at") or "",
+            "completedAt": run.get("completed_at") or "",
+        })
+    return checks
+
+
+def fetch_pr_head_sha(pr_value: str, repo_root: Path) -> str | None:
+    result = run_gh_command(
+        ["pr", "view", pr_value, "--json", "headRefOid", "--jq", ".headRefOid"],
+        cwd=repo_root,
+    )
+    if result.returncode != 0:
+        return None
+    sha = result.stdout.strip()
+    return sha if sha else None
 
 
 def is_failing(check: dict[str, Any]) -> bool:
@@ -396,23 +433,6 @@ def normalize_field(value: Any) -> str:
         return ""
     return str(value).strip().lower()
 
-
-def parse_available_fields(message: str) -> list[str]:
-    if "Available fields:" not in message:
-        return []
-    fields: list[str] = []
-    collecting = False
-    for line in message.splitlines():
-        if "Available fields:" in line:
-            collecting = True
-            continue
-        if not collecting:
-            continue
-        field = line.strip()
-        if not field:
-            continue
-        fields.append(field)
-    return fields
 
 
 def is_log_pending_message(message: str) -> bool:
