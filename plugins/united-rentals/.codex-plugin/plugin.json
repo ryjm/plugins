@@ -1,9 +1,10 @@
 {
   "name": "united-rentals",
   "version": "1.0.0",
-  "description": "Equipment rentals and inventory",
+  "description": "Get the right equipment for the job without guesswork.",
   "author": {
-    "name": "United Rentals"
+    "name": "United Rentals",
+    "url": "https://www.unitedrentals.com"
   },
   "repository": "https://github.com/openai/plugins",
   "license": "MIT",
@@ -11,14 +12,20 @@
   "apps": "./.app.json",
   "interface": {
     "displayName": "United Rentals",
-    "shortDescription": "Equipment rentals and inventory",
-    "longDescription": "Equipment rentals and inventory",
+    "shortDescription": "Get the right equipment for the job without guesswork.",
+    "longDescription": "Get the right equipment for the job without guesswork. Share your project details and receive tailored equipment recommendations, along with specifications to support confident selection.",
     "developerName": "United Rentals",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
       "Find the relevant United Rentals inventory or availability"
     ],
-    "screenshots": []
-  }
+    "screenshots": [],
+    "websiteURL": "https://www.unitedrentals.com",
+    "privacyPolicyURL": "https://www.unitedrentals.com/legal/privacy-policy",
+    "termsOfServiceURL": "https://www.unitedrentals.com/legal/website-terms-of-use-us-eng",
+    "composerIcon": "./assets/app-icon.png",
+    "logo": "./assets/app-icon.png"
+  },
+  "homepage": "https://www.unitedrentals.com"
 }

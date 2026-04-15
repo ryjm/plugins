@@ -1,7 +1,7 @@
 {
   "name": "zoominfo",
   "version": "1.0.0",
-  "description": "B2B Data & GTM Intelligence",
+  "description": "Access ZoomInfo\u2019s data and AI context within ChatGPT.",
   "author": {
     "name": "ZoomInfo Technologies LLC",
     "url": "https://www.zoominfo.com/"
@@ -13,8 +13,8 @@
   "apps": "./.app.json",
   "interface": {
     "displayName": "ZoomInfo",
-    "shortDescription": "B2B Data & GTM Intelligence",
-    "longDescription": "Access ZoomInfo’s data and AI context within ChatGPT. Prospecting, Account Research, Verified Contacts, buying signals, and more are now available directly in your conversations.",
+    "shortDescription": "Access ZoomInfo\u2019s data and AI context within ChatGPT.",
+    "longDescription": "Access ZoomInfo\u2019s data and AI context within ChatGPT. Prospecting, Account Research, Verified Contacts, buying signals, and more are now available directly in your conversations.",
     "developerName": "ZoomInfo Technologies LLC",
     "category": "Productivity",
     "capabilities": [],

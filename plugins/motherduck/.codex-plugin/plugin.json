@@ -1,7 +1,7 @@
 {
   "name": "motherduck",
   "version": "1.0.0",
-  "description": "Get answers from your data",
+  "description": "Connect AI assistants to your MotherDuck data warehouse.",
   "author": {
     "name": "MotherDuck Corporation",
     "url": "https://motherduck.com/"
@@ -13,8 +13,8 @@
   "apps": "./.app.json",
   "interface": {
     "displayName": "MotherDuck",
-    "shortDescription": "Get answers from your data",
-    "longDescription": "Connect AI assistants to your MotherDuck data warehouse. Explore, visualize, and manage data using natural language–no SQL skills required. Create Dives: interactive visualizations that let you save and share answers with your team, staying up-to-date with your latest data. Works with real-world data without requiring semantic models or pre-configuration. Your AI assistant acts like a data analyst, exploring, validating, analyzing, and visualizing data iteratively to answer your questions.",
+    "shortDescription": "Connect AI assistants to your MotherDuck data warehouse.",
+    "longDescription": "Connect AI assistants to your MotherDuck data warehouse. Explore, visualize, and manage data using natural language\u2013no SQL skills required. Create Dives: interactive visualizations that let you save and share answers with your team, staying up-to-date with your latest data. Works with real-world data without requiring semantic models or pre-configuration. Your AI assistant acts like a data analyst, exploring, validating, analyzing, and visualizing data iteratively to answer your questions.",
     "developerName": "MotherDuck Corporation",
     "category": "Productivity",
     "capabilities": [],
@@ -24,6 +24,8 @@
     "defaultPrompt": [
       "Show the top 30 customers by revenue last quarter"
     ],
-    "screenshots": []
+    "screenshots": [],
+    "composerIcon": "./assets/app-icon.png",
+    "logo": "./assets/app-icon.png"
   }
 }

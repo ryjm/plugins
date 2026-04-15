@@ -21,6 +21,9 @@
     "defaultPrompt": [
       "Review email metrics and summarize deliverability"
     ],
-    "screenshots": []
+    "screenshots": [],
+    "longDescription": "Connector for interacting with the SendGrid email API.",
+    "composerIcon": "./assets/app-icon.png",
+    "logo": "./assets/app-icon.png"
   }
 }

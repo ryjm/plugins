@@ -1,9 +1,10 @@
 {
   "name": "daloopa",
   "version": "1.0.0",
-  "description": "Financial KPIs with links",
+  "description": "Daloopa supplies high quality fundamental data sourced from SEC Filings, investor presentations and any pub...",
   "author": {
-    "url": "https://daloopa.com/"
+    "url": "https://daloopa.com/",
+    "name": "Daloopa, Inc."
   },
   "homepage": "https://daloopa.com/",
   "repository": "https://github.com/openai/plugins",
@@ -12,9 +13,9 @@
   "apps": "./.app.json",
   "interface": {
     "displayName": "Daloopa",
-    "shortDescription": "Financial KPIs with links",
-    "longDescription": "Financial KPIs with links",
-    "category": "Productivity",
+    "shortDescription": "Daloopa supplies high quality fundamental data sourced from SEC Filings, investor presentations and any pub...",
+    "longDescription": "Daloopa supplies high quality fundamental data sourced from SEC Filings, investor presentations and any public financial documents, with hyperlinks to source document overlaying each data point. Provides a zero-hallucination foundation for any quantitative financial analysis in Claude.",
+    "category": "Research",
     "capabilities": [],
     "websiteURL": "https://daloopa.com/",
     "privacyPolicyURL": "https://daloopa.com/privacy-policy-2",
@@ -24,6 +25,7 @@
     ],
     "screenshots": [],
     "composerIcon": "./assets/app-icon.png",
-    "logo": "./assets/app-icon.png"
+    "logo": "./assets/app-icon.png",
+    "developerName": "Daloopa, Inc."
   }
 }

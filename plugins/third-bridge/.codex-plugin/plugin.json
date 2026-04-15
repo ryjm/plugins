@@ -1,7 +1,7 @@
 {
   "name": "third-bridge",
   "version": "1.0.0",
-  "description": "Expert-led enhanced insights",
+  "description": "Seamlessly incorporate critical context and trusted insights from industry experts as part of your financia...",
   "author": {
     "name": "Third Bridge Group",
     "url": "https://www.thirdbridge.com"
@@ -13,14 +13,14 @@
   "apps": "./.app.json",
   "interface": {
     "displayName": "Third Bridge",
-    "shortDescription": "Expert-led enhanced insights",
-    "longDescription": "Seamlessly incorporate critical context and trusted insights from industry experts as part of your financial and business analysis. Refocus on extracting high-quality, reliable information by querying Third Bridge’s best-in-class substantial Library of expert content and data.\n\nOur MCP systematically and securely instructs Large Language Models (LLMs) to query insights from our database into their systems, streamlining your workflows and improving your output.",
+    "shortDescription": "Seamlessly incorporate critical context and trusted insights from industry experts as part of your financia...",
+    "longDescription": "Seamlessly incorporate critical context and trusted insights from industry experts as part of your financial and business analysis. Refocus on extracting high-quality, reliable information by querying Third Bridge\u2019s best-in-class substantial Library of expert content and data.\n\nOur MCP systematically and securely instructs Large Language Models (LLMs) to query insights from our database into their systems, streamlining your workflows and improving your output.",
     "developerName": "Third Bridge Group",
-    "category": "Productivity",
+    "category": "Research",
     "capabilities": [],
     "websiteURL": "https://www.thirdbridge.com",
     "privacyPolicyURL": "https://www.thirdbridge.com/en-us/about-us/compliance/policies/privacy-policy",
-    "termsOfServiceURL": "https://www.thirdbridge.com/en-us/about-us/compliance/policies/third-bridge-content-terms-and-conditions",
+    "termsOfServiceURL": "https://www.thirdbridge.com/en-us/about-us/compliance/policies/third-bridge-mcp-pilot-terms",
     "defaultPrompt": [
       "Competitive analysis based on Third Bridge expert network"
     ],

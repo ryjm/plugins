@@ -1,9 +1,10 @@
 {
   "name": "happenstance",
   "version": "1.0.0",
-  "description": "Proximity networking and meetups",
+  "description": "Happenstance searches your professional network using natural language to find the right people.",
   "author": {
-    "name": "Happenstance"
+    "name": "Happenstance, Inc.",
+    "url": "https://happenstance.ai"
   },
   "repository": "https://github.com/openai/plugins",
   "license": "MIT",
@@ -11,14 +12,20 @@
   "apps": "./.app.json",
   "interface": {
     "displayName": "Happenstance",
-    "shortDescription": "Proximity networking and meetups",
-    "longDescription": "Proximity networking and meetups",
-    "developerName": "Happenstance",
+    "shortDescription": "Happenstance searches your professional network using natural language to find the right people.",
+    "longDescription": "Happenstance searches your professional network using natural language to find the right people. Results surface mutual connections and rank by relationship strength, helping you find the warmest intro path. Deep research anyone to get comprehensive profiles with career history and expertise. Ideal for sales, recruiting, venture capital, and business development.",
+    "developerName": "Happenstance, Inc.",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
       "Check whether Happenstance has relevant contact context"
     ],
-    "screenshots": []
-  }
+    "screenshots": [],
+    "websiteURL": "https://happenstance.ai",
+    "privacyPolicyURL": "https://happenstance.ai/privacy",
+    "termsOfServiceURL": "https://happenstance.ai/terms",
+    "composerIcon": "./assets/app-icon.png",
+    "logo": "./assets/app-icon.png"
+  },
+  "homepage": "https://happenstance.ai"
 }

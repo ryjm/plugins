@@ -1,9 +1,10 @@
 {
   "name": "egnyte",
   "version": "1.0.0",
-  "description": "Explore and analyze your content",
+  "description": "Work with documents and files stored in Egnyte directly from ChatGPT.",
   "author": {
-    "url": "https://www.egnyte.com"
+    "url": "https://www.egnyte.com",
+    "name": "Egnyte Inc"
   },
   "homepage": "https://www.egnyte.com",
   "repository": "https://github.com/openai/plugins",
@@ -12,8 +13,8 @@
   "apps": "./.app.json",
   "interface": {
     "displayName": "Egnyte",
-    "shortDescription": "Explore and analyze your content",
-    "longDescription": "Explore and analyze your content",
+    "shortDescription": "Work with documents and files stored in Egnyte directly from ChatGPT.",
+    "longDescription": "Work with documents and files stored in Egnyte directly from ChatGPT. Search across folders, retrieve relevant files, and extract key information to answer questions or generate summaries.\n\nQuickly surface insights from contracts, reports, and internal documents. Combine information from multiple files to create concise summaries, stakeholder updates, or draft written content grounded in your team\u2019s internal materials.",
     "category": "Productivity",
     "capabilities": [],
     "websiteURL": "https://www.egnyte.com",
@@ -24,6 +25,7 @@
     ],
     "screenshots": [],
     "composerIcon": "./assets/app-icon.png",
-    "logo": "./assets/app-icon.png"
+    "logo": "./assets/app-icon.png",
+    "developerName": "Egnyte Inc"
   }
 }
