@@ -40,10 +40,10 @@ Prereq: authenticate with GitHub CLI once, then confirm with `gh auth status`. R
    - Preferred: run the bundled script (handles gh field drift and job-log fallbacks):
      - `python "<path-to-skill>/scripts/inspect_pr_checks.py" --repo "." --pr "<number-or-url>"`
      - Add `--json` for machine-friendly output.
-   - Manual fallback:
-     - `gh pr checks <pr> --json name,state,bucket,link,startedAt,completedAt,workflow`
-       - If a field is rejected, rerun with the available fields reported by `gh`.
-     - For each failing check, extract the run id from `detailsUrl` and run:
+   - Manual fallback (when the bundled script is unavailable):
+     - Get the PR head SHA: `gh pr view <pr> --json headRefOid --jq '.headRefOid'`
+     - Fetch checks via the REST API: `gh api '/repos/{owner}/{repo}/commits/{sha}/check-runs'`
+     - For each failing check, extract the run id from `details_url` and run:
        - `gh run view <run_id> --json name,workflowName,conclusion,status,url,event,headBranch,headSha`
        - `gh run view <run_id> --log`
      - If the run log says it is still in progress, fetch job logs directly:
