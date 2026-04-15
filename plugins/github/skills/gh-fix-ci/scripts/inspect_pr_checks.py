@@ -199,20 +199,20 @@ def fetch_checks(pr_value: str, repo_root: Path) -> list[dict[str, Any]] | None:
 def _normalize_rollup_entry(entry: dict[str, Any]) -> dict[str, Any]:
     if entry.get("__typename") == "StatusContext":
         return {
-            "name": entry.get("context", ""),
-            "state": entry.get("state", ""),
-            "conclusion": entry.get("state", ""),
-            "detailsUrl": entry.get("targetUrl", ""),
-            "startedAt": entry.get("createdAt", ""),
+            "name": entry.get("context") or "",
+            "state": entry.get("state") or "",
+            "conclusion": entry.get("state") or "",
+            "detailsUrl": entry.get("targetUrl") or "",
+            "startedAt": entry.get("createdAt") or "",
             "completedAt": "",
         }
     return {
-        "name": entry.get("name", ""),
-        "state": entry.get("status", ""),
-        "conclusion": entry.get("conclusion", ""),
-        "detailsUrl": entry.get("detailsUrl", ""),
-        "startedAt": entry.get("startedAt", ""),
-        "completedAt": entry.get("completedAt", ""),
+        "name": entry.get("name") or "",
+        "state": entry.get("status") or "",
+        "conclusion": entry.get("conclusion") or "",
+        "detailsUrl": entry.get("detailsUrl") or "",
+        "startedAt": entry.get("startedAt") or "",
+        "completedAt": entry.get("completedAt") or "",
     }
 
 
