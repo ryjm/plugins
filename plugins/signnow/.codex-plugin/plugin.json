@@ -1,0 +1,24 @@
+{
+  "name": "signnow",
+  "version": "1.0.0",
+  "description": "E-signatures and agreements",
+  "author": {
+    "name": "SignNow"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "SignNow",
+    "shortDescription": "E-signatures and agreements",
+    "longDescription": "E-signatures and agreements",
+    "developerName": "SignNow",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Check the status of the relevant SignNow document"
+    ],
+    "screenshots": []
+  }
+}

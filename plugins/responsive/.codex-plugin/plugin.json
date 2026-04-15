@@ -1,0 +1,24 @@
+{
+  "name": "responsive",
+  "version": "1.0.0",
+  "description": "RFPs and response management",
+  "author": {
+    "name": "Responsive"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Responsive",
+    "shortDescription": "RFPs and response management",
+    "longDescription": "RFPs and response management",
+    "developerName": "Responsive",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Pull the relevant proposal content from Responsive"
+    ],
+    "screenshots": []
+  }
+}

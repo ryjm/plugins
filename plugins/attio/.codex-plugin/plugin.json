@@ -1,0 +1,24 @@
+{
+  "name": "attio",
+  "version": "1.0.0",
+  "description": "CRM and relationship data",
+  "author": {
+    "name": "Attio"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Attio",
+    "shortDescription": "CRM and relationship data",
+    "longDescription": "CRM and relationship data",
+    "developerName": "Attio",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find the latest notes and next steps in Attio"
+    ],
+    "screenshots": []
+  }
+}

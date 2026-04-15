@@ -1,0 +1,24 @@
+{
+  "name": "weatherpromise",
+  "version": "1.0.0",
+  "description": "Weather forecasts and planning",
+  "author": {
+    "name": "WeatherPromise"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "WeatherPromise",
+    "shortDescription": "Weather forecasts and planning",
+    "longDescription": "Weather forecasts and planning",
+    "developerName": "WeatherPromise",
+    "category": "Lifestyle",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Summarize the weather outlook from WeatherPromise"
+    ],
+    "screenshots": []
+  }
+}

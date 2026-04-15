@@ -1,0 +1,24 @@
+{
+  "name": "cogedim",
+  "version": "1.0.0",
+  "description": "Real estate programs and listings",
+  "author": {
+    "name": "Cogedim"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Cogedim",
+    "shortDescription": "Real estate programs and listings",
+    "longDescription": "Real estate programs and listings",
+    "developerName": "Cogedim",
+    "category": "Lifestyle",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find relevant Cogedim properties for this brief"
+    ],
+    "screenshots": []
+  }
+}

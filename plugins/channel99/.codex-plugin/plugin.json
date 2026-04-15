@@ -1,0 +1,24 @@
+{
+  "name": "channel99",
+  "version": "1.0.0",
+  "description": "B2B marketing performance insights",
+  "author": {
+    "name": "Channel99"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Channel99",
+    "shortDescription": "B2B marketing performance insights",
+    "longDescription": "B2B marketing performance insights",
+    "developerName": "Channel99",
+    "category": "Research",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Summarize campaign performance from Channel99"
+    ],
+    "screenshots": []
+  }
+}

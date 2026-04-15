@@ -1,0 +1,24 @@
+{
+  "name": "waldo",
+  "version": "1.0.0",
+  "description": "Mobile app testing",
+  "author": {
+    "name": "Waldo"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Waldo",
+    "shortDescription": "Mobile app testing",
+    "longDescription": "Mobile app testing",
+    "developerName": "Waldo",
+    "category": "Coding",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Check the relevant mobile test coverage in Waldo"
+    ],
+    "screenshots": []
+  }
+}

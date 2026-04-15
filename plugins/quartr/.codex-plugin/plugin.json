@@ -1,0 +1,24 @@
+{
+  "name": "quartr",
+  "version": "1.0.0",
+  "description": "Earnings calls and filings",
+  "author": {
+    "name": "Quartr"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Quartr",
+    "shortDescription": "Earnings calls and filings",
+    "longDescription": "Earnings calls and filings",
+    "developerName": "Quartr",
+    "category": "Research",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find the latest relevant Quartr materials"
+    ],
+    "screenshots": []
+  }
+}

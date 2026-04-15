@@ -1,0 +1,24 @@
+{
+  "name": "dovetail",
+  "version": "1.0.0",
+  "description": "Customer research insights",
+  "author": {
+    "name": "Dovetail"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Dovetail",
+    "shortDescription": "Customer research insights",
+    "longDescription": "Customer research insights",
+    "developerName": "Dovetail",
+    "category": "Research",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find the relevant customer insights in Dovetail"
+    ],
+    "screenshots": []
+  }
+}

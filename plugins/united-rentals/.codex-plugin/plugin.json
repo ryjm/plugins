@@ -1,0 +1,24 @@
+{
+  "name": "united-rentals",
+  "version": "1.0.0",
+  "description": "Equipment rentals and inventory",
+  "author": {
+    "name": "United Rentals"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "United Rentals",
+    "shortDescription": "Equipment rentals and inventory",
+    "longDescription": "Equipment rentals and inventory",
+    "developerName": "United Rentals",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find the relevant United Rentals inventory or availability"
+    ],
+    "screenshots": []
+  }
+}

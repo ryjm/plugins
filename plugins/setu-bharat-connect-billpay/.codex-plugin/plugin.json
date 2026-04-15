@@ -1,0 +1,24 @@
+{
+  "name": "setu-bharat-connect-billpay",
+  "version": "1.0.0",
+  "description": "Bill payments via BBPS",
+  "author": {
+    "name": "Setu Bharat Connect BillPay"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Setu Bharat Connect BillPay",
+    "shortDescription": "Bill payments via BBPS",
+    "longDescription": "Bill payments via BBPS",
+    "developerName": "Setu Bharat Connect BillPay",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Check the relevant bill payment context in Setu"
+    ],
+    "screenshots": []
+  }
+}

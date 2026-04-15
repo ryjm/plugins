@@ -1,0 +1,24 @@
+{
+  "name": "windsor-ai",
+  "version": "1.0.0",
+  "description": "Marketing attribution data",
+  "author": {
+    "name": "Windsor.ai"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Windsor.ai",
+    "shortDescription": "Marketing attribution data",
+    "longDescription": "Marketing attribution data",
+    "developerName": "Windsor.ai",
+    "category": "Research",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Pull the relevant attribution context from Windsor.ai"
+    ],
+    "screenshots": []
+  }
+}

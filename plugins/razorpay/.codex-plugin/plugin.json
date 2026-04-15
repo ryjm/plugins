@@ -1,0 +1,24 @@
+{
+  "name": "razorpay",
+  "version": "1.0.0",
+  "description": "Payments and finance ops",
+  "author": {
+    "name": "Razorpay"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Razorpay",
+    "shortDescription": "Payments and finance ops",
+    "longDescription": "Payments and finance ops",
+    "developerName": "Razorpay",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Check the relevant payment context in Razorpay"
+    ],
+    "screenshots": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "gitlab-issues",
+  "version": "1.0.0",
+  "description": "GitLab issue triage and tracking",
+  "author": {
+    "name": "GitLab Issues"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "GitLab Issues",
+    "shortDescription": "GitLab issue triage and tracking",
+    "longDescription": "GitLab issue triage and tracking",
+    "developerName": "GitLab Issues",
+    "category": "Coding",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Summarize the open GitLab issues for this project"
+    ],
+    "screenshots": []
+  }
+}

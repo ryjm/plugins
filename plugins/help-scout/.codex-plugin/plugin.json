@@ -1,0 +1,24 @@
+{
+  "name": "help-scout",
+  "version": "1.0.0",
+  "description": "Support inbox and docs",
+  "author": {
+    "name": "Help Scout"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Help Scout",
+    "shortDescription": "Support inbox and docs",
+    "longDescription": "Support inbox and docs",
+    "developerName": "Help Scout",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Summarize the Help Scout thread and next actions"
+    ],
+    "screenshots": []
+  }
+}

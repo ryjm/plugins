@@ -1,0 +1,24 @@
+{
+  "name": "readwise",
+  "version": "1.0.0",
+  "description": "Highlights and spaced review",
+  "author": {
+    "name": "Readwise"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Readwise",
+    "shortDescription": "Highlights and spaced review",
+    "longDescription": "Highlights and spaced review",
+    "developerName": "Readwise",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find the most relevant highlights in Readwise"
+    ],
+    "screenshots": []
+  }
+}

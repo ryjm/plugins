@@ -1,0 +1,24 @@
+{
+  "name": "carta-crm",
+  "version": "1.0.0",
+  "description": "Investor CRM and relationships",
+  "author": {
+    "name": "Carta CRM"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Carta CRM",
+    "shortDescription": "Investor CRM and relationships",
+    "longDescription": "Investor CRM and relationships",
+    "developerName": "Carta CRM",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find the latest relationship context in Carta CRM"
+    ],
+    "screenshots": []
+  }
+}

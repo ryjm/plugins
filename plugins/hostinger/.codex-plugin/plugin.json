@@ -1,0 +1,24 @@
+{
+  "name": "hostinger",
+  "version": "1.0.0",
+  "description": "Hosting and website management",
+  "author": {
+    "name": "Hostinger"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Hostinger",
+    "shortDescription": "Hosting and website management",
+    "longDescription": "Hosting and website management",
+    "developerName": "Hostinger",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Check the relevant Hostinger site or account status"
+    ],
+    "screenshots": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "quicknode",
+  "version": "1.0.0",
+  "description": "Web3 infrastructure and RPC",
+  "author": {
+    "name": "QuickNode"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "QuickNode",
+    "shortDescription": "Web3 infrastructure and RPC",
+    "longDescription": "Web3 infrastructure and RPC",
+    "developerName": "QuickNode",
+    "category": "Coding",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Use QuickNode to inspect the relevant chain data"
+    ],
+    "screenshots": []
+  }
+}

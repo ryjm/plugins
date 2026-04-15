@@ -1,0 +1,24 @@
+{
+  "name": "domotz-preview",
+  "version": "1.0.0",
+  "description": "Network monitoring and management",
+  "author": {
+    "name": "Domotz (Preview)"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Domotz (Preview)",
+    "shortDescription": "Network monitoring and management",
+    "longDescription": "Network monitoring and management",
+    "developerName": "Domotz (Preview)",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Summarize the current network state in Domotz"
+    ],
+    "screenshots": []
+  }
+}

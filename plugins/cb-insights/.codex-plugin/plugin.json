@@ -1,0 +1,24 @@
+{
+  "name": "cb-insights",
+  "version": "1.0.0",
+  "description": "Company and market research",
+  "author": {
+    "name": "CB Insights"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "CB Insights",
+    "shortDescription": "Company and market research",
+    "longDescription": "Company and market research",
+    "developerName": "CB Insights",
+    "category": "Research",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Pull the latest market context from CB Insights"
+    ],
+    "screenshots": []
+  }
+}

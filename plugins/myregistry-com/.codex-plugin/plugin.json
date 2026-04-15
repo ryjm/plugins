@@ -1,0 +1,24 @@
+{
+  "name": "myregistry-com",
+  "version": "1.0.0",
+  "description": "Gift registries and wish lists",
+  "author": {
+    "name": "MyRegistry.com"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "MIT",
+  "keywords": [],
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "MyRegistry.com",
+    "shortDescription": "Gift registries and wish lists",
+    "longDescription": "Gift registries and wish lists",
+    "developerName": "MyRegistry.com",
+    "category": "Lifestyle",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find the relevant registry details in MyRegistry.com"
+    ],
+    "screenshots": []
+  }
+}
